@@ -134,10 +134,10 @@
             this.PnlHistory.Controls.Add(this.RtBoxDisplayHistory);
             this.PnlHistory.Controls.Add(this.BtnClearHistory);
             this.PnlHistory.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PnlHistory.Location = new System.Drawing.Point(0, 566);
+            this.PnlHistory.Location = new System.Drawing.Point(0, 565);
             this.PnlHistory.Margin = new System.Windows.Forms.Padding(0);
             this.PnlHistory.Name = "PnlHistory";
-            this.PnlHistory.Size = new System.Drawing.Size(350, 4);
+            this.PnlHistory.Size = new System.Drawing.Size(350, 5);
             this.PnlHistory.TabIndex = 1;
             // 
             // RtBoxDisplayHistory
@@ -160,7 +160,7 @@
             this.BtnClearHistory.FlatAppearance.BorderSize = 0;
             this.BtnClearHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnClearHistory.Image = ((System.Drawing.Image)(resources.GetObject("BtnClearHistory.Image")));
-            this.BtnClearHistory.Location = new System.Drawing.Point(0, -37);
+            this.BtnClearHistory.Location = new System.Drawing.Point(0, -36);
             this.BtnClearHistory.Margin = new System.Windows.Forms.Padding(0);
             this.BtnClearHistory.Name = "BtnClearHistory";
             this.BtnClearHistory.Size = new System.Drawing.Size(350, 41);
@@ -710,6 +710,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(350, 570);
+            this.Controls.Add(this.PnlHistory);
             this.Controls.Add(this.BtnDecimal);
             this.Controls.Add(this.Btn0);
             this.Controls.Add(this.BtnPM);
@@ -743,7 +744,6 @@
             this.Controls.Add(this.TxtDisplay2);
             this.Controls.Add(this.TxtDisplay1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.PnlHistory);
             this.Controls.Add(this.PnlTitle);
             this.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
