@@ -450,6 +450,7 @@
             this.BtnDivide.TabIndex = 17;
             this.BtnDivide.Text = "÷";
             this.BtnDivide.UseVisualStyleBackColor = false;
+            this.BtnDivide.Click += new System.EventHandler(this.BtnMathOperations_Click);
             // 
             // Btn9
             // 
@@ -513,6 +514,7 @@
             this.BtnMultiply.TabIndex = 21;
             this.BtnMultiply.Text = "×";
             this.BtnMultiply.UseVisualStyleBackColor = false;
+            this.BtnMultiply.Click += new System.EventHandler(this.BtnMathOperations_Click);
             // 
             // Btn6
             // 
@@ -576,6 +578,7 @@
             this.BtnSubtract.TabIndex = 25;
             this.BtnSubtract.Text = "-";
             this.BtnSubtract.UseVisualStyleBackColor = false;
+            this.BtnSubtract.Click += new System.EventHandler(this.BtnMathOperations_Click);
             // 
             // Btn3
             // 
@@ -639,6 +642,7 @@
             this.BtnAdd.TabIndex = 29;
             this.BtnAdd.Text = "+";
             this.BtnAdd.UseVisualStyleBackColor = false;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnMathOperations_Click);
             // 
             // BtnDecimal
             // 
@@ -701,6 +705,7 @@
             this.BtnEquals.TabIndex = 33;
             this.BtnEquals.Text = "=";
             this.BtnEquals.UseVisualStyleBackColor = false;
+            this.BtnEquals.Click += new System.EventHandler(this.BtnEquals_Click);
             // 
             // Form1
             // 

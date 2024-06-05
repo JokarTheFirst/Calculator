@@ -23,6 +23,48 @@ namespace Calculator
             InitializeComponent();
         }
 
+        private void BtnMathOperations_Click(object sender, EventArgs e)
+        {
+            if (result != 0) BtnEquals.PerformClick();
+            else result = Double.Parse(TxtDisplay2.Text);
+
+            Button button = (Button)sender;
+            operation = button.Text;
+            enterValue = true;
+            if (TxtDisplay2.Text != "0")
+            {
+                TxtDisplay2.Text = fstNum = $"{result}{operation}";
+                TxtDisplay2.Text = string.Empty;
+            }
+        }
+
+        private void BtnEquals_Click(object sender, EventArgs e)
+        {
+            sndNum = TxtDisplay2.Text;
+            TxtDisplay2.Text = $"{TxtDisplay1.Text} = {TxtDisplay2.Text} =";
+            if (TxtDisplay2.Text != string.Empty)
+            {
+                if (TxtDisplay2.Text == "0") TxtDisplay2.Text = string.Empty;
+                switch (operation)
+                {
+                    case "+":
+                        TxtDisplay2.Text = (result + Double.Parse(TxtDisplay2.Text)).ToString();
+                        break;
+                    case "-":
+                        TxtDisplay2.Text = (result - Double.Parse(TxtDisplay2.Text)).ToString();
+                        break;
+                    case "×":
+                        TxtDisplay2.Text = (result * Double.Parse(TxtDisplay2.Text)).ToString();
+                        break;
+                    case "÷":
+                        TxtDisplay2.Text = (result / Double.Parse(TxtDisplay2.Text)).ToString();
+                        break;
+                    default: TxtDisplay1.Text = $"{TxtDisplay2.Text} = ";
+                        break;
+                }
+            }
+        }
+
         private void BtnNum_Click(object sender, EventArgs e)
         {
             if (TxtDisplay2.Text == "0"||enterValue) TxtDisplay2.Text = string.Empty;
@@ -31,7 +73,7 @@ namespace Calculator
             Button button = (Button)sender;
             if (button.Text == ".")
             {
-                if(TxtDisplay2.Text.Contains("."))
+                if(!TxtDisplay2.Text.Contains("."))
                     TxtDisplay2.Text = TxtDisplay2.Text + button.Text;  
             }
               else TxtDisplay2.Text = TxtDisplay2.Text + button.Text;
