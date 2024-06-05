@@ -134,6 +134,11 @@ namespace Calculator
             RtBoxDisplayHistory.AppendText($"{TxtDisplay1.Text} = {TxtDisplay2.Text} \n");
         }
 
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void BtnNum_Click(object sender, EventArgs e)
         {
             if (TxtDisplay2.Text == "0"||enterValue) TxtDisplay2.Text = string.Empty;
