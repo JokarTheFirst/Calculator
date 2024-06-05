@@ -166,6 +166,7 @@
             this.BtnClearHistory.Size = new System.Drawing.Size(350, 41);
             this.BtnClearHistory.TabIndex = 3;
             this.BtnClearHistory.UseVisualStyleBackColor = true;
+            this.BtnClearHistory.Click += new System.EventHandler(this.BtnClearHistory_Click);
             // 
             // panel1
             // 
@@ -253,6 +254,7 @@
             this.BtnBackSpace.Size = new System.Drawing.Size(83, 55);
             this.BtnBackSpace.TabIndex = 5;
             this.BtnBackSpace.UseVisualStyleBackColor = false;
+            this.BtnBackSpace.Click += new System.EventHandler(this.BtnBackSpace_Click);
             // 
             // button1
             // 
@@ -358,6 +360,7 @@
             this.BtnPercent.TabIndex = 14;
             this.BtnPercent.Text = "%";
             this.BtnPercent.UseVisualStyleBackColor = false;
+            this.BtnPercent.Click += new System.EventHandler(this.BtnComplexOperations_Click);
             // 
             // BtnCE
             // 
@@ -373,6 +376,7 @@
             this.BtnCE.TabIndex = 15;
             this.BtnCE.Text = "CE";
             this.BtnCE.UseVisualStyleBackColor = false;
+            this.BtnCE.Click += new System.EventHandler(this.BtnCE_Click);
             // 
             // BtnC
             // 
@@ -388,6 +392,7 @@
             this.BtnC.TabIndex = 16;
             this.BtnC.Text = "C";
             this.BtnC.UseVisualStyleBackColor = false;
+            this.BtnC.Click += new System.EventHandler(this.BtnC_Click);
             // 
             // BtnSquareRoot
             // 
@@ -403,6 +408,7 @@
             this.BtnSquareRoot.TabIndex = 20;
             this.BtnSquareRoot.Text = "√x";
             this.BtnSquareRoot.UseVisualStyleBackColor = false;
+            this.BtnSquareRoot.Click += new System.EventHandler(this.BtnComplexOperations_Click);
             // 
             // BtnPower
             // 
@@ -418,6 +424,7 @@
             this.BtnPower.TabIndex = 19;
             this.BtnPower.Text = "^2";
             this.BtnPower.UseVisualStyleBackColor = false;
+            this.BtnPower.Click += new System.EventHandler(this.BtnComplexOperations_Click);
             // 
             // BtnRatio
             // 
@@ -433,6 +440,7 @@
             this.BtnRatio.TabIndex = 18;
             this.BtnRatio.Text = "⅟x";
             this.BtnRatio.UseVisualStyleBackColor = false;
+            this.BtnRatio.Click += new System.EventHandler(this.BtnComplexOperations_Click);
             // 
             // BtnDivide
             // 
@@ -688,6 +696,7 @@
             this.BtnPM.TabIndex = 34;
             this.BtnPM.Text = "±";
             this.BtnPM.UseVisualStyleBackColor = false;
+            this.BtnPM.Click += new System.EventHandler(this.BtnComplexOperations_Click);
             // 
             // BtnEquals
             // 

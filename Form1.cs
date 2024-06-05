@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -75,6 +76,62 @@ namespace Calculator
         private void BtnHistory_Click(object sender, EventArgs e)
         {
             PnlHistory.Height = (PnlHistory.Height == 5) ? PnlHistory.Height = 345 : 5;
+        }
+
+        private void BtnClearHistory_Click(object sender, EventArgs e)
+        {
+            RtBoxDisplayHistory.Clear();
+            if (RtBoxDisplayHistory.Text == string.Empty)
+                RtBoxDisplayHistory.Text = "There's no history yet.";
+        }
+
+        private void BtnBackSpace_Click(object sender, EventArgs e)
+        {
+            if (TxtDisplay2.Text.Length > 0)
+                TxtDisplay2.Text = TxtDisplay2.Text.Remove(TxtDisplay2.Text.Length - 1, 1);
+            if (TxtDisplay2.Text == string.Empty) TxtDisplay2.Text = "0";
+        }
+
+        private void BtnC_Click(object sender, EventArgs e)
+        {
+            TxtDisplay2.Text = "0";
+            TxtDisplay1.Text = string.Empty;
+            result = 0;
+        }
+
+        private void BtnCE_Click(object sender, EventArgs e)
+        {
+            TxtDisplay2.Text = "0";
+        }
+
+        private void BtnComplexOperations_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            operation = button.Text;
+            switch (operation)
+            {
+                case "√x":
+                    TxtDisplay1.Text = $"√({TxtDisplay2.Text})";
+                    TxtDisplay2.Text = Convert.ToString(Math.Sqrt(Double.Parse(TxtDisplay2.Text)));
+                    break;
+                case "^2":
+                    TxtDisplay1.Text = $"({TxtDisplay2.Text})^2";
+                    TxtDisplay2.Text = Convert.ToString(Convert.ToDouble(TxtDisplay2.Text)* Convert.ToDouble(TxtDisplay2.Text));
+                    break;
+                case "⅟x":
+                    TxtDisplay1.Text = $"⅟({TxtDisplay2.Text})";
+                    TxtDisplay2.Text = Convert.ToString(1.0 / Convert.ToDouble(TxtDisplay2.Text));
+                    break;
+                case "%":
+                    TxtDisplay1.Text = $"%({TxtDisplay2.Text})";
+                    TxtDisplay2.Text = Convert.ToString(Convert.ToDouble(TxtDisplay2.Text)/ Convert.ToDouble(100));
+                    break;
+                case "±":
+                    TxtDisplay1.Text = $"±({TxtDisplay2.Text})";
+                    TxtDisplay2.Text = Convert.ToString(-1 * Convert.ToDouble(TxtDisplay2.Text));
+                    break;
+            }
+            RtBoxDisplayHistory.AppendText($"{TxtDisplay1.Text} = {TxtDisplay2.Text} \n");
         }
 
         private void BtnNum_Click(object sender, EventArgs e)
