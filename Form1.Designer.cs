@@ -34,15 +34,20 @@
             this.BtnExpand = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
             this.PnlHistory = new System.Windows.Forms.Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.BtnClearHistory = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnMenu = new System.Windows.Forms.Button();
             this.BtnHistory = new System.Windows.Forms.Button();
             this.TxtDisplay1 = new System.Windows.Forms.TextBox();
             this.TxtDisplay2 = new System.Windows.Forms.TextBox();
-            this.BtnClearHistory = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.BtnClear = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.PnlTitle.SuspendLayout();
             this.PnlHistory.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -113,6 +118,34 @@
             this.PnlHistory.Name = "PnlHistory";
             this.PnlHistory.Size = new System.Drawing.Size(350, 4);
             this.PnlHistory.TabIndex = 1;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.ForeColor = System.Drawing.Color.Silver;
+            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
+            this.richTextBox1.Size = new System.Drawing.Size(350, 0);
+            this.richTextBox1.TabIndex = 4;
+            this.richTextBox1.Text = "";
+            // 
+            // BtnClearHistory
+            // 
+            this.BtnClearHistory.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BtnClearHistory.FlatAppearance.BorderSize = 0;
+            this.BtnClearHistory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.BtnClearHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnClearHistory.Image = ((System.Drawing.Image)(resources.GetObject("BtnClearHistory.Image")));
+            this.BtnClearHistory.Location = new System.Drawing.Point(0, -37);
+            this.BtnClearHistory.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnClearHistory.Name = "BtnClearHistory";
+            this.BtnClearHistory.Size = new System.Drawing.Size(350, 41);
+            this.BtnClearHistory.TabIndex = 3;
+            this.BtnClearHistory.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -186,34 +219,6 @@
             this.TxtDisplay2.Text = "0";
             this.TxtDisplay2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // BtnClearHistory
-            // 
-            this.BtnClearHistory.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BtnClearHistory.FlatAppearance.BorderSize = 0;
-            this.BtnClearHistory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.BtnClearHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnClearHistory.Image = ((System.Drawing.Image)(resources.GetObject("BtnClearHistory.Image")));
-            this.BtnClearHistory.Location = new System.Drawing.Point(0, -37);
-            this.BtnClearHistory.Margin = new System.Windows.Forms.Padding(0);
-            this.BtnClearHistory.Name = "BtnClearHistory";
-            this.BtnClearHistory.Size = new System.Drawing.Size(350, 41);
-            this.BtnClearHistory.TabIndex = 3;
-            this.BtnClearHistory.UseVisualStyleBackColor = true;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.ForeColor = System.Drawing.Color.Silver;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
-            this.richTextBox1.Size = new System.Drawing.Size(350, 0);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
-            // 
             // BtnClear
             // 
             this.BtnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
@@ -236,7 +241,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(291, 170);
+            this.button1.Location = new System.Drawing.Point(250, 169);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 30);
@@ -244,11 +249,91 @@
             this.button1.Text = "M~";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(200, 169);
+            this.button2.Margin = new System.Windows.Forms.Padding(0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(50, 30);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "MS";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(150, 169);
+            this.button3.Margin = new System.Windows.Forms.Padding(0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(50, 30);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "M-";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(100, 169);
+            this.button4.Margin = new System.Windows.Forms.Padding(0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(50, 30);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "M+";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(50, 169);
+            this.button5.Margin = new System.Windows.Forms.Padding(0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(50, 30);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "MR";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(0, 169);
+            this.button6.Margin = new System.Windows.Forms.Padding(0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(50, 30);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "MC";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(350, 570);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BtnClear);
             this.Controls.Add(this.TxtDisplay2);
@@ -286,6 +371,11 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button BtnClear;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 
