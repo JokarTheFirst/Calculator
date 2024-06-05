@@ -34,7 +34,7 @@
             this.BtnExpand = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
             this.PnlHistory = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.RtBoxDisplayHistory = new System.Windows.Forms.RichTextBox();
             this.BtnClearHistory = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnMenu = new System.Windows.Forms.Button();
@@ -92,7 +92,6 @@
             // 
             this.ButtonMinimize.Dock = System.Windows.Forms.DockStyle.Right;
             this.ButtonMinimize.FlatAppearance.BorderSize = 0;
-            this.ButtonMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.ButtonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonMinimize.Image = ((System.Drawing.Image)(resources.GetObject("ButtonMinimize.Image")));
             this.ButtonMinimize.Location = new System.Drawing.Point(200, 0);
@@ -106,7 +105,6 @@
             // 
             this.BtnExpand.Dock = System.Windows.Forms.DockStyle.Right;
             this.BtnExpand.FlatAppearance.BorderSize = 0;
-            this.BtnExpand.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.BtnExpand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnExpand.Image = ((System.Drawing.Image)(resources.GetObject("BtnExpand.Image")));
             this.BtnExpand.Location = new System.Drawing.Point(250, 0);
@@ -130,45 +128,46 @@
             this.BtnExit.Size = new System.Drawing.Size(50, 40);
             this.BtnExit.TabIndex = 0;
             this.BtnExit.UseVisualStyleBackColor = true;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // PnlHistory
             // 
-            this.PnlHistory.Controls.Add(this.richTextBox1);
+            this.PnlHistory.Controls.Add(this.RtBoxDisplayHistory);
             this.PnlHistory.Controls.Add(this.BtnClearHistory);
             this.PnlHistory.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PnlHistory.Location = new System.Drawing.Point(0, 566);
+            this.PnlHistory.Location = new System.Drawing.Point(0, 565);
             this.PnlHistory.Margin = new System.Windows.Forms.Padding(0);
             this.PnlHistory.Name = "PnlHistory";
-            this.PnlHistory.Size = new System.Drawing.Size(350, 4);
+            this.PnlHistory.Size = new System.Drawing.Size(350, 5);
             this.PnlHistory.TabIndex = 1;
             // 
-            // richTextBox1
+            // RtBoxDisplayHistory
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.ForeColor = System.Drawing.Color.Silver;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
-            this.richTextBox1.Size = new System.Drawing.Size(350, 0);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
+            this.RtBoxDisplayHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.RtBoxDisplayHistory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RtBoxDisplayHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RtBoxDisplayHistory.ForeColor = System.Drawing.Color.Silver;
+            this.RtBoxDisplayHistory.Location = new System.Drawing.Point(0, 0);
+            this.RtBoxDisplayHistory.Margin = new System.Windows.Forms.Padding(0);
+            this.RtBoxDisplayHistory.Name = "RtBoxDisplayHistory";
+            this.RtBoxDisplayHistory.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
+            this.RtBoxDisplayHistory.Size = new System.Drawing.Size(350, 0);
+            this.RtBoxDisplayHistory.TabIndex = 4;
+            this.RtBoxDisplayHistory.Text = "";
             // 
             // BtnClearHistory
             // 
             this.BtnClearHistory.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BtnClearHistory.FlatAppearance.BorderSize = 0;
-            this.BtnClearHistory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.BtnClearHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnClearHistory.Image = ((System.Drawing.Image)(resources.GetObject("BtnClearHistory.Image")));
-            this.BtnClearHistory.Location = new System.Drawing.Point(0, -37);
+            this.BtnClearHistory.Location = new System.Drawing.Point(0, -36);
             this.BtnClearHistory.Margin = new System.Windows.Forms.Padding(0);
             this.BtnClearHistory.Name = "BtnClearHistory";
             this.BtnClearHistory.Size = new System.Drawing.Size(350, 41);
             this.BtnClearHistory.TabIndex = 3;
             this.BtnClearHistory.UseVisualStyleBackColor = true;
+            this.BtnClearHistory.Click += new System.EventHandler(this.BtnClearHistory_Click);
             // 
             // panel1
             // 
@@ -185,7 +184,6 @@
             // 
             this.BtnMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.BtnMenu.FlatAppearance.BorderSize = 0;
-            this.BtnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.BtnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnMenu.Image")));
             this.BtnMenu.Location = new System.Drawing.Point(0, 0);
@@ -199,7 +197,6 @@
             // 
             this.BtnHistory.Dock = System.Windows.Forms.DockStyle.Right;
             this.BtnHistory.FlatAppearance.BorderSize = 0;
-            this.BtnHistory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.BtnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnHistory.ForeColor = System.Drawing.Color.White;
             this.BtnHistory.Image = ((System.Drawing.Image)(resources.GetObject("BtnHistory.Image")));
@@ -209,6 +206,7 @@
             this.BtnHistory.Size = new System.Drawing.Size(50, 49);
             this.BtnHistory.TabIndex = 0;
             this.BtnHistory.UseVisualStyleBackColor = true;
+            this.BtnHistory.Click += new System.EventHandler(this.BtnHistory_Click);
             // 
             // TxtDisplay1
             // 
@@ -223,7 +221,6 @@
             this.TxtDisplay1.Name = "TxtDisplay1";
             this.TxtDisplay1.Size = new System.Drawing.Size(350, 25);
             this.TxtDisplay1.TabIndex = 3;
-            this.TxtDisplay1.Text = "0";
             this.TxtDisplay1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TxtDisplay2
@@ -244,11 +241,11 @@
             // 
             // BtnBackSpace
             // 
-            this.BtnBackSpace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.BtnBackSpace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.BtnBackSpace.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.BtnBackSpace.FlatAppearance.BorderSize = 2;
             this.BtnBackSpace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBackSpace.ForeColor = System.Drawing.Color.White;
+            this.BtnBackSpace.ForeColor = System.Drawing.Color.DimGray;
             this.BtnBackSpace.Image = ((System.Drawing.Image)(resources.GetObject("BtnBackSpace.Image")));
             this.BtnBackSpace.Location = new System.Drawing.Point(258, 224);
             this.BtnBackSpace.Margin = new System.Windows.Forms.Padding(0);
@@ -256,6 +253,7 @@
             this.BtnBackSpace.Size = new System.Drawing.Size(83, 55);
             this.BtnBackSpace.TabIndex = 5;
             this.BtnBackSpace.UseVisualStyleBackColor = false;
+            this.BtnBackSpace.Click += new System.EventHandler(this.BtnBackSpace_Click);
             // 
             // button1
             // 
@@ -263,7 +261,7 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ForeColor = System.Drawing.Color.DarkGray;
             this.button1.Location = new System.Drawing.Point(290, 186);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
@@ -278,7 +276,7 @@
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.ForeColor = System.Drawing.Color.DarkGray;
             this.button2.Location = new System.Drawing.Point(232, 186);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
@@ -293,7 +291,7 @@
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.ForeColor = System.Drawing.Color.DarkGray;
             this.button3.Location = new System.Drawing.Point(174, 186);
             this.button3.Margin = new System.Windows.Forms.Padding(0);
             this.button3.Name = "button3";
@@ -308,7 +306,7 @@
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.ForeColor = System.Drawing.Color.DarkGray;
             this.button4.Location = new System.Drawing.Point(116, 186);
             this.button4.Margin = new System.Windows.Forms.Padding(0);
             this.button4.Name = "button4";
@@ -323,7 +321,7 @@
             this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.ForeColor = System.Drawing.Color.DarkGray;
             this.button5.Location = new System.Drawing.Point(58, 186);
             this.button5.Margin = new System.Windows.Forms.Padding(0);
             this.button5.Name = "button5";
@@ -338,7 +336,7 @@
             this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.ForeColor = System.Drawing.Color.DarkGray;
             this.button6.Location = new System.Drawing.Point(0, 186);
             this.button6.Margin = new System.Windows.Forms.Padding(0);
             this.button6.Name = "button6";
@@ -349,11 +347,11 @@
             // 
             // BtnPercent
             // 
-            this.BtnPercent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.BtnPercent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.BtnPercent.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.BtnPercent.FlatAppearance.BorderSize = 2;
             this.BtnPercent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPercent.ForeColor = System.Drawing.Color.White;
+            this.BtnPercent.ForeColor = System.Drawing.Color.Silver;
             this.BtnPercent.Location = new System.Drawing.Point(9, 224);
             this.BtnPercent.Margin = new System.Windows.Forms.Padding(0);
             this.BtnPercent.Name = "BtnPercent";
@@ -361,14 +359,15 @@
             this.BtnPercent.TabIndex = 14;
             this.BtnPercent.Text = "%";
             this.BtnPercent.UseVisualStyleBackColor = false;
+            this.BtnPercent.Click += new System.EventHandler(this.BtnComplexOperations_Click);
             // 
             // BtnCE
             // 
-            this.BtnCE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.BtnCE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.BtnCE.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.BtnCE.FlatAppearance.BorderSize = 2;
             this.BtnCE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCE.ForeColor = System.Drawing.Color.White;
+            this.BtnCE.ForeColor = System.Drawing.Color.Silver;
             this.BtnCE.Location = new System.Drawing.Point(92, 224);
             this.BtnCE.Margin = new System.Windows.Forms.Padding(0);
             this.BtnCE.Name = "BtnCE";
@@ -376,14 +375,15 @@
             this.BtnCE.TabIndex = 15;
             this.BtnCE.Text = "CE";
             this.BtnCE.UseVisualStyleBackColor = false;
+            this.BtnCE.Click += new System.EventHandler(this.BtnCE_Click);
             // 
             // BtnC
             // 
-            this.BtnC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.BtnC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.BtnC.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.BtnC.FlatAppearance.BorderSize = 2;
             this.BtnC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnC.ForeColor = System.Drawing.Color.White;
+            this.BtnC.ForeColor = System.Drawing.Color.Silver;
             this.BtnC.Location = new System.Drawing.Point(175, 224);
             this.BtnC.Margin = new System.Windows.Forms.Padding(0);
             this.BtnC.Name = "BtnC";
@@ -391,14 +391,15 @@
             this.BtnC.TabIndex = 16;
             this.BtnC.Text = "C";
             this.BtnC.UseVisualStyleBackColor = false;
+            this.BtnC.Click += new System.EventHandler(this.BtnC_Click);
             // 
             // BtnSquareRoot
             // 
-            this.BtnSquareRoot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.BtnSquareRoot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.BtnSquareRoot.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.BtnSquareRoot.FlatAppearance.BorderSize = 2;
             this.BtnSquareRoot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSquareRoot.ForeColor = System.Drawing.Color.White;
+            this.BtnSquareRoot.ForeColor = System.Drawing.Color.Silver;
             this.BtnSquareRoot.Location = new System.Drawing.Point(175, 279);
             this.BtnSquareRoot.Margin = new System.Windows.Forms.Padding(0);
             this.BtnSquareRoot.Name = "BtnSquareRoot";
@@ -406,14 +407,15 @@
             this.BtnSquareRoot.TabIndex = 20;
             this.BtnSquareRoot.Text = "√x";
             this.BtnSquareRoot.UseVisualStyleBackColor = false;
+            this.BtnSquareRoot.Click += new System.EventHandler(this.BtnComplexOperations_Click);
             // 
             // BtnPower
             // 
-            this.BtnPower.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.BtnPower.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.BtnPower.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.BtnPower.FlatAppearance.BorderSize = 2;
             this.BtnPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPower.ForeColor = System.Drawing.Color.White;
+            this.BtnPower.ForeColor = System.Drawing.Color.Silver;
             this.BtnPower.Location = new System.Drawing.Point(92, 279);
             this.BtnPower.Margin = new System.Windows.Forms.Padding(0);
             this.BtnPower.Name = "BtnPower";
@@ -421,14 +423,15 @@
             this.BtnPower.TabIndex = 19;
             this.BtnPower.Text = "^2";
             this.BtnPower.UseVisualStyleBackColor = false;
+            this.BtnPower.Click += new System.EventHandler(this.BtnComplexOperations_Click);
             // 
             // BtnRatio
             // 
-            this.BtnRatio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.BtnRatio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.BtnRatio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.BtnRatio.FlatAppearance.BorderSize = 2;
             this.BtnRatio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRatio.ForeColor = System.Drawing.Color.White;
+            this.BtnRatio.ForeColor = System.Drawing.Color.Silver;
             this.BtnRatio.Location = new System.Drawing.Point(9, 279);
             this.BtnRatio.Margin = new System.Windows.Forms.Padding(0);
             this.BtnRatio.Name = "BtnRatio";
@@ -436,14 +439,16 @@
             this.BtnRatio.TabIndex = 18;
             this.BtnRatio.Text = "⅟x";
             this.BtnRatio.UseVisualStyleBackColor = false;
+            this.BtnRatio.Click += new System.EventHandler(this.BtnComplexOperations_Click);
             // 
             // BtnDivide
             // 
-            this.BtnDivide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.BtnDivide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.BtnDivide.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.BtnDivide.FlatAppearance.BorderSize = 2;
             this.BtnDivide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDivide.ForeColor = System.Drawing.Color.White;
+            this.BtnDivide.Font = new System.Drawing.Font("Gadugi", 16F);
+            this.BtnDivide.ForeColor = System.Drawing.Color.Silver;
             this.BtnDivide.Location = new System.Drawing.Point(258, 279);
             this.BtnDivide.Margin = new System.Windows.Forms.Padding(0);
             this.BtnDivide.Name = "BtnDivide";
@@ -451,6 +456,7 @@
             this.BtnDivide.TabIndex = 17;
             this.BtnDivide.Text = "÷";
             this.BtnDivide.UseVisualStyleBackColor = false;
+            this.BtnDivide.Click += new System.EventHandler(this.BtnMathOperations_Click);
             // 
             // Btn9
             // 
@@ -458,7 +464,8 @@
             this.Btn9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.Btn9.FlatAppearance.BorderSize = 2;
             this.Btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn9.ForeColor = System.Drawing.Color.White;
+            this.Btn9.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn9.ForeColor = System.Drawing.Color.Silver;
             this.Btn9.Location = new System.Drawing.Point(175, 334);
             this.Btn9.Margin = new System.Windows.Forms.Padding(0);
             this.Btn9.Name = "Btn9";
@@ -466,6 +473,7 @@
             this.Btn9.TabIndex = 24;
             this.Btn9.Text = "9";
             this.Btn9.UseVisualStyleBackColor = false;
+            this.Btn9.Click += new System.EventHandler(this.BtnNum_Click);
             // 
             // Btn8
             // 
@@ -473,7 +481,8 @@
             this.Btn8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.Btn8.FlatAppearance.BorderSize = 2;
             this.Btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn8.ForeColor = System.Drawing.Color.White;
+            this.Btn8.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn8.ForeColor = System.Drawing.Color.Silver;
             this.Btn8.Location = new System.Drawing.Point(92, 334);
             this.Btn8.Margin = new System.Windows.Forms.Padding(0);
             this.Btn8.Name = "Btn8";
@@ -481,6 +490,7 @@
             this.Btn8.TabIndex = 23;
             this.Btn8.Text = "8";
             this.Btn8.UseVisualStyleBackColor = false;
+            this.Btn8.Click += new System.EventHandler(this.BtnNum_Click);
             // 
             // Btn7
             // 
@@ -488,7 +498,8 @@
             this.Btn7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.Btn7.FlatAppearance.BorderSize = 2;
             this.Btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn7.ForeColor = System.Drawing.Color.White;
+            this.Btn7.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn7.ForeColor = System.Drawing.Color.Silver;
             this.Btn7.Location = new System.Drawing.Point(9, 334);
             this.Btn7.Margin = new System.Windows.Forms.Padding(0);
             this.Btn7.Name = "Btn7";
@@ -496,14 +507,16 @@
             this.Btn7.TabIndex = 22;
             this.Btn7.Text = "7";
             this.Btn7.UseVisualStyleBackColor = false;
+            this.Btn7.Click += new System.EventHandler(this.BtnNum_Click);
             // 
             // BtnMultiply
             // 
-            this.BtnMultiply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.BtnMultiply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.BtnMultiply.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.BtnMultiply.FlatAppearance.BorderSize = 2;
             this.BtnMultiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMultiply.ForeColor = System.Drawing.Color.White;
+            this.BtnMultiply.Font = new System.Drawing.Font("Gadugi", 16F);
+            this.BtnMultiply.ForeColor = System.Drawing.Color.Silver;
             this.BtnMultiply.Location = new System.Drawing.Point(258, 334);
             this.BtnMultiply.Margin = new System.Windows.Forms.Padding(0);
             this.BtnMultiply.Name = "BtnMultiply";
@@ -511,6 +524,7 @@
             this.BtnMultiply.TabIndex = 21;
             this.BtnMultiply.Text = "×";
             this.BtnMultiply.UseVisualStyleBackColor = false;
+            this.BtnMultiply.Click += new System.EventHandler(this.BtnMathOperations_Click);
             // 
             // Btn6
             // 
@@ -518,7 +532,8 @@
             this.Btn6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.Btn6.FlatAppearance.BorderSize = 2;
             this.Btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn6.ForeColor = System.Drawing.Color.White;
+            this.Btn6.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn6.ForeColor = System.Drawing.Color.Silver;
             this.Btn6.Location = new System.Drawing.Point(175, 389);
             this.Btn6.Margin = new System.Windows.Forms.Padding(0);
             this.Btn6.Name = "Btn6";
@@ -526,6 +541,7 @@
             this.Btn6.TabIndex = 28;
             this.Btn6.Text = "6";
             this.Btn6.UseVisualStyleBackColor = false;
+            this.Btn6.Click += new System.EventHandler(this.BtnNum_Click);
             // 
             // Btn5
             // 
@@ -533,7 +549,8 @@
             this.Btn5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.Btn5.FlatAppearance.BorderSize = 2;
             this.Btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn5.ForeColor = System.Drawing.Color.White;
+            this.Btn5.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn5.ForeColor = System.Drawing.Color.Silver;
             this.Btn5.Location = new System.Drawing.Point(92, 389);
             this.Btn5.Margin = new System.Windows.Forms.Padding(0);
             this.Btn5.Name = "Btn5";
@@ -541,6 +558,7 @@
             this.Btn5.TabIndex = 27;
             this.Btn5.Text = "5";
             this.Btn5.UseVisualStyleBackColor = false;
+            this.Btn5.Click += new System.EventHandler(this.BtnNum_Click);
             // 
             // Btn4
             // 
@@ -548,7 +566,8 @@
             this.Btn4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.Btn4.FlatAppearance.BorderSize = 2;
             this.Btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn4.ForeColor = System.Drawing.Color.White;
+            this.Btn4.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn4.ForeColor = System.Drawing.Color.Silver;
             this.Btn4.Location = new System.Drawing.Point(9, 389);
             this.Btn4.Margin = new System.Windows.Forms.Padding(0);
             this.Btn4.Name = "Btn4";
@@ -556,14 +575,16 @@
             this.Btn4.TabIndex = 26;
             this.Btn4.Text = "4";
             this.Btn4.UseVisualStyleBackColor = false;
+            this.Btn4.Click += new System.EventHandler(this.BtnNum_Click);
             // 
             // BtnSubtract
             // 
-            this.BtnSubtract.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.BtnSubtract.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.BtnSubtract.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.BtnSubtract.FlatAppearance.BorderSize = 2;
             this.BtnSubtract.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSubtract.ForeColor = System.Drawing.Color.White;
+            this.BtnSubtract.Font = new System.Drawing.Font("Gadugi", 16F);
+            this.BtnSubtract.ForeColor = System.Drawing.Color.Silver;
             this.BtnSubtract.Location = new System.Drawing.Point(258, 389);
             this.BtnSubtract.Margin = new System.Windows.Forms.Padding(0);
             this.BtnSubtract.Name = "BtnSubtract";
@@ -571,6 +592,7 @@
             this.BtnSubtract.TabIndex = 25;
             this.BtnSubtract.Text = "-";
             this.BtnSubtract.UseVisualStyleBackColor = false;
+            this.BtnSubtract.Click += new System.EventHandler(this.BtnMathOperations_Click);
             // 
             // Btn3
             // 
@@ -578,7 +600,8 @@
             this.Btn3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.Btn3.FlatAppearance.BorderSize = 2;
             this.Btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn3.ForeColor = System.Drawing.Color.White;
+            this.Btn3.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn3.ForeColor = System.Drawing.Color.Silver;
             this.Btn3.Location = new System.Drawing.Point(175, 444);
             this.Btn3.Margin = new System.Windows.Forms.Padding(0);
             this.Btn3.Name = "Btn3";
@@ -586,6 +609,7 @@
             this.Btn3.TabIndex = 32;
             this.Btn3.Text = "3";
             this.Btn3.UseVisualStyleBackColor = false;
+            this.Btn3.Click += new System.EventHandler(this.BtnNum_Click);
             // 
             // Btn2
             // 
@@ -593,7 +617,8 @@
             this.Btn2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.Btn2.FlatAppearance.BorderSize = 2;
             this.Btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn2.ForeColor = System.Drawing.Color.White;
+            this.Btn2.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn2.ForeColor = System.Drawing.Color.Silver;
             this.Btn2.Location = new System.Drawing.Point(92, 444);
             this.Btn2.Margin = new System.Windows.Forms.Padding(0);
             this.Btn2.Name = "Btn2";
@@ -601,6 +626,7 @@
             this.Btn2.TabIndex = 31;
             this.Btn2.Text = "2";
             this.Btn2.UseVisualStyleBackColor = false;
+            this.Btn2.Click += new System.EventHandler(this.BtnNum_Click);
             // 
             // Btn1
             // 
@@ -608,7 +634,8 @@
             this.Btn1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.Btn1.FlatAppearance.BorderSize = 2;
             this.Btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn1.ForeColor = System.Drawing.Color.White;
+            this.Btn1.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn1.ForeColor = System.Drawing.Color.Silver;
             this.Btn1.Location = new System.Drawing.Point(9, 444);
             this.Btn1.Margin = new System.Windows.Forms.Padding(0);
             this.Btn1.Name = "Btn1";
@@ -616,14 +643,16 @@
             this.Btn1.TabIndex = 30;
             this.Btn1.Text = "1";
             this.Btn1.UseVisualStyleBackColor = false;
+            this.Btn1.Click += new System.EventHandler(this.BtnNum_Click);
             // 
             // BtnAdd
             // 
-            this.BtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.BtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.BtnAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.BtnAdd.FlatAppearance.BorderSize = 2;
             this.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAdd.ForeColor = System.Drawing.Color.White;
+            this.BtnAdd.Font = new System.Drawing.Font("Gadugi", 16F);
+            this.BtnAdd.ForeColor = System.Drawing.Color.Silver;
             this.BtnAdd.Location = new System.Drawing.Point(258, 444);
             this.BtnAdd.Margin = new System.Windows.Forms.Padding(0);
             this.BtnAdd.Name = "BtnAdd";
@@ -631,6 +660,7 @@
             this.BtnAdd.TabIndex = 29;
             this.BtnAdd.Text = "+";
             this.BtnAdd.UseVisualStyleBackColor = false;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnMathOperations_Click);
             // 
             // BtnDecimal
             // 
@@ -638,7 +668,8 @@
             this.BtnDecimal.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.BtnDecimal.FlatAppearance.BorderSize = 2;
             this.BtnDecimal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDecimal.ForeColor = System.Drawing.Color.White;
+            this.BtnDecimal.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDecimal.ForeColor = System.Drawing.Color.Silver;
             this.BtnDecimal.Location = new System.Drawing.Point(175, 499);
             this.BtnDecimal.Margin = new System.Windows.Forms.Padding(0);
             this.BtnDecimal.Name = "BtnDecimal";
@@ -646,6 +677,7 @@
             this.BtnDecimal.TabIndex = 36;
             this.BtnDecimal.Text = ".";
             this.BtnDecimal.UseVisualStyleBackColor = false;
+            this.BtnDecimal.Click += new System.EventHandler(this.BtnNum_Click);
             // 
             // Btn0
             // 
@@ -653,7 +685,8 @@
             this.Btn0.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.Btn0.FlatAppearance.BorderSize = 2;
             this.Btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn0.ForeColor = System.Drawing.Color.White;
+            this.Btn0.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn0.ForeColor = System.Drawing.Color.Silver;
             this.Btn0.Location = new System.Drawing.Point(92, 499);
             this.Btn0.Margin = new System.Windows.Forms.Padding(0);
             this.Btn0.Name = "Btn0";
@@ -661,6 +694,7 @@
             this.Btn0.TabIndex = 35;
             this.Btn0.Text = "0";
             this.Btn0.UseVisualStyleBackColor = false;
+            this.Btn0.Click += new System.EventHandler(this.BtnNum_Click);
             // 
             // BtnPM
             // 
@@ -668,7 +702,8 @@
             this.BtnPM.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.BtnPM.FlatAppearance.BorderSize = 2;
             this.BtnPM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPM.ForeColor = System.Drawing.Color.White;
+            this.BtnPM.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPM.ForeColor = System.Drawing.Color.Silver;
             this.BtnPM.Location = new System.Drawing.Point(9, 499);
             this.BtnPM.Margin = new System.Windows.Forms.Padding(0);
             this.BtnPM.Name = "BtnPM";
@@ -676,14 +711,16 @@
             this.BtnPM.TabIndex = 34;
             this.BtnPM.Text = "±";
             this.BtnPM.UseVisualStyleBackColor = false;
+            this.BtnPM.Click += new System.EventHandler(this.BtnComplexOperations_Click);
             // 
             // BtnEquals
             // 
-            this.BtnEquals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.BtnEquals.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BtnEquals.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.BtnEquals.FlatAppearance.BorderSize = 2;
             this.BtnEquals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEquals.ForeColor = System.Drawing.Color.White;
+            this.BtnEquals.Font = new System.Drawing.Font("Gadugi", 16F);
+            this.BtnEquals.ForeColor = System.Drawing.Color.Silver;
             this.BtnEquals.Location = new System.Drawing.Point(258, 499);
             this.BtnEquals.Margin = new System.Windows.Forms.Padding(0);
             this.BtnEquals.Name = "BtnEquals";
@@ -691,12 +728,14 @@
             this.BtnEquals.TabIndex = 33;
             this.BtnEquals.Text = "=";
             this.BtnEquals.UseVisualStyleBackColor = false;
+            this.BtnEquals.Click += new System.EventHandler(this.BtnEquals_Click);
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(350, 570);
+            this.Controls.Add(this.PnlHistory);
             this.Controls.Add(this.BtnDecimal);
             this.Controls.Add(this.Btn0);
             this.Controls.Add(this.BtnPM);
@@ -730,7 +769,6 @@
             this.Controls.Add(this.TxtDisplay2);
             this.Controls.Add(this.TxtDisplay1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.PnlHistory);
             this.Controls.Add(this.PnlTitle);
             this.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
@@ -759,7 +797,7 @@
         private System.Windows.Forms.TextBox TxtDisplay1;
         private System.Windows.Forms.TextBox TxtDisplay2;
         private System.Windows.Forms.Button BtnClearHistory;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox RtBoxDisplayHistory;
         private System.Windows.Forms.Button BtnBackSpace;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
