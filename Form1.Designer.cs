@@ -40,6 +40,7 @@
             this.TxtDisplay1 = new System.Windows.Forms.TextBox();
             this.TxtDisplay2 = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.BtnClearHistory = new System.Windows.Forms.Button();
             this.PnlTitle.SuspendLayout();
             this.PnlHistory.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -102,12 +103,13 @@
             // 
             // PnlHistory
             // 
+            this.PnlHistory.Controls.Add(this.BtnClearHistory);
             this.PnlHistory.Controls.Add(this.richTextBox1);
             this.PnlHistory.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PnlHistory.Location = new System.Drawing.Point(0, 530);
+            this.PnlHistory.Location = new System.Drawing.Point(0, 429);
             this.PnlHistory.Margin = new System.Windows.Forms.Padding(0);
             this.PnlHistory.Name = "PnlHistory";
-            this.PnlHistory.Size = new System.Drawing.Size(350, 40);
+            this.PnlHistory.Size = new System.Drawing.Size(350, 141);
             this.PnlHistory.TabIndex = 1;
             // 
             // panel1
@@ -184,11 +186,28 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(149, 4);
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.richTextBox1.ForeColor = System.Drawing.Color.Silver;
+            this.richTextBox1.Location = new System.Drawing.Point(250, 0);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(0);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(100, 96);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
+            // 
+            // BtnClearHistory
+            // 
+            this.BtnClearHistory.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BtnClearHistory.FlatAppearance.BorderSize = 0;
+            this.BtnClearHistory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.BtnClearHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnClearHistory.Image = ((System.Drawing.Image)(resources.GetObject("BtnClearHistory.Image")));
+            this.BtnClearHistory.Location = new System.Drawing.Point(0, 101);
+            this.BtnClearHistory.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnClearHistory.Name = "BtnClearHistory";
+            this.BtnClearHistory.Size = new System.Drawing.Size(350, 40);
+            this.BtnClearHistory.TabIndex = 3;
+            this.BtnClearHistory.UseVisualStyleBackColor = true;
             // 
             // TxtDisplay
             // 
@@ -227,6 +246,7 @@
         private System.Windows.Forms.TextBox TxtDisplay1;
         private System.Windows.Forms.TextBox TxtDisplay2;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button BtnClearHistory;
     }
 }
 
