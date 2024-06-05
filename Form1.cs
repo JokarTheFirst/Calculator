@@ -43,6 +43,7 @@ namespace Calculator
         {
             sndNum = TxtDisplay2.Text;
             TxtDisplay1.Text = $"{TxtDisplay1.Text}{TxtDisplay2.Text} =";
+            if (RtBoxDisplayHistory.Text == "There's no history yet.") RtBoxDisplayHistory.Text = "";
             if (TxtDisplay2.Text != string.Empty)
             {
                 if (TxtDisplay2.Text == "0") TxtDisplay1.Text = string.Empty;
@@ -70,6 +71,7 @@ namespace Calculator
 
                 result = Double.Parse(TxtDisplay2.Text);
                 operation = string.Empty;
+                
             }
         }
 

@@ -184,7 +184,6 @@
             // 
             this.BtnMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.BtnMenu.FlatAppearance.BorderSize = 0;
-            this.BtnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.BtnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnMenu.Image")));
             this.BtnMenu.Location = new System.Drawing.Point(0, 0);
