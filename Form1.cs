@@ -41,7 +41,7 @@ namespace Calculator
         private void BtnEquals_Click(object sender, EventArgs e)
         {
             sndNum = TxtDisplay2.Text;
-            TxtDisplay1.Text = $"{TxtDisplay1.Text} {TxtDisplay2.Text} =";
+            TxtDisplay1.Text = $"{TxtDisplay1.Text}{TxtDisplay2.Text} =";
             if (TxtDisplay2.Text != string.Empty)
             {
                 if (TxtDisplay2.Text == "0") TxtDisplay1.Text = string.Empty;
@@ -63,9 +63,12 @@ namespace Calculator
                         TxtDisplay2.Text = (result / Double.Parse(TxtDisplay2.Text)).ToString();
                         RtBoxDisplayHistory.AppendText($"{fstNum}{sndNum} = {TxtDisplay2.Text} \n");   
                         break;
-                    default: TxtDisplay1.Text = $"{TxtDisplay2.Text} = ";
+                    default: TxtDisplay1.Text = $"{TxtDisplay2.Text}= ";
                         break;
                 }
+
+                result = Double.Parse(TxtDisplay2.Text);
+                operation = string.Empty;
             }
         }
 
