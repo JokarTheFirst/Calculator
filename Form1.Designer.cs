@@ -34,7 +34,7 @@
             this.BtnExpand = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
             this.PnlHistory = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.RtBoxDisplayHistory = new System.Windows.Forms.RichTextBox();
             this.BtnClearHistory = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnMenu = new System.Windows.Forms.Button();
@@ -92,7 +92,6 @@
             // 
             this.ButtonMinimize.Dock = System.Windows.Forms.DockStyle.Right;
             this.ButtonMinimize.FlatAppearance.BorderSize = 0;
-            this.ButtonMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.ButtonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonMinimize.Image = ((System.Drawing.Image)(resources.GetObject("ButtonMinimize.Image")));
             this.ButtonMinimize.Location = new System.Drawing.Point(200, 0);
@@ -106,7 +105,6 @@
             // 
             this.BtnExpand.Dock = System.Windows.Forms.DockStyle.Right;
             this.BtnExpand.FlatAppearance.BorderSize = 0;
-            this.BtnExpand.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.BtnExpand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnExpand.Image = ((System.Drawing.Image)(resources.GetObject("BtnExpand.Image")));
             this.BtnExpand.Location = new System.Drawing.Point(250, 0);
@@ -133,7 +131,7 @@
             // 
             // PnlHistory
             // 
-            this.PnlHistory.Controls.Add(this.richTextBox1);
+            this.PnlHistory.Controls.Add(this.RtBoxDisplayHistory);
             this.PnlHistory.Controls.Add(this.BtnClearHistory);
             this.PnlHistory.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PnlHistory.Location = new System.Drawing.Point(0, 566);
@@ -142,25 +140,24 @@
             this.PnlHistory.Size = new System.Drawing.Size(350, 4);
             this.PnlHistory.TabIndex = 1;
             // 
-            // richTextBox1
+            // RtBoxDisplayHistory
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.ForeColor = System.Drawing.Color.Silver;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
-            this.richTextBox1.Size = new System.Drawing.Size(350, 0);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
+            this.RtBoxDisplayHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.RtBoxDisplayHistory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RtBoxDisplayHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RtBoxDisplayHistory.ForeColor = System.Drawing.Color.Silver;
+            this.RtBoxDisplayHistory.Location = new System.Drawing.Point(0, 0);
+            this.RtBoxDisplayHistory.Margin = new System.Windows.Forms.Padding(0);
+            this.RtBoxDisplayHistory.Name = "RtBoxDisplayHistory";
+            this.RtBoxDisplayHistory.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
+            this.RtBoxDisplayHistory.Size = new System.Drawing.Size(350, 0);
+            this.RtBoxDisplayHistory.TabIndex = 4;
+            this.RtBoxDisplayHistory.Text = "";
             // 
             // BtnClearHistory
             // 
             this.BtnClearHistory.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BtnClearHistory.FlatAppearance.BorderSize = 0;
-            this.BtnClearHistory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.BtnClearHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnClearHistory.Image = ((System.Drawing.Image)(resources.GetObject("BtnClearHistory.Image")));
             this.BtnClearHistory.Location = new System.Drawing.Point(0, -37);
@@ -209,6 +206,7 @@
             this.BtnHistory.Size = new System.Drawing.Size(50, 49);
             this.BtnHistory.TabIndex = 0;
             this.BtnHistory.UseVisualStyleBackColor = true;
+            this.BtnHistory.Click += new System.EventHandler(this.BtnHistory_Click);
             // 
             // TxtDisplay1
             // 
@@ -774,7 +772,7 @@
         private System.Windows.Forms.TextBox TxtDisplay1;
         private System.Windows.Forms.TextBox TxtDisplay2;
         private System.Windows.Forms.Button BtnClearHistory;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox RtBoxDisplayHistory;
         private System.Windows.Forms.Button BtnBackSpace;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
