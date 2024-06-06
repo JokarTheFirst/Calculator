@@ -147,9 +147,10 @@ namespace Calculator
 
             enterValue = false;
             Button button = (Button)sender;
-            if (button.Text == ".")
+            if (button.Text == ",")
             {
-                if(!TxtDisplay2.Text.Contains("."))
+                if (TxtDisplay2.Text == "") TxtDisplay2.Text = "0,";
+                if (!TxtDisplay2.Text.Contains(","))
                     TxtDisplay2.Text = TxtDisplay2.Text + button.Text;  
             }
               else TxtDisplay2.Text = TxtDisplay2.Text + button.Text;
