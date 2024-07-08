@@ -62,15 +62,23 @@ namespace Calculator
                         RtBoxDisplayHistory.AppendText($"{fstNum}{sndNum} = {TxtDisplay2.Text} \n");
                         break;
                     case "÷":
+                        if (sndNum == "0")
+                        {
+                            TxtDisplay2.Text = ("Error");
+                            break;
+                        }
                         TxtDisplay2.Text = (result / Double.Parse(TxtDisplay2.Text)).ToString();
                         RtBoxDisplayHistory.AppendText($"{fstNum}{sndNum} = {TxtDisplay2.Text} \n");   
                         break;
                     default: TxtDisplay1.Text = $"{TxtDisplay2.Text}= ";
                         break;
                 }
-
-                result = Double.Parse(TxtDisplay2.Text);
-                operation = string.Empty;
+                if (TxtDisplay2.Text == "Error") operation = string.Empty;
+                else 
+                {
+                    result = Double.Parse(TxtDisplay2.Text);
+                    operation = string.Empty;
+                }
                 
             }
         }
