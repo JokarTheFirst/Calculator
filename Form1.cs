@@ -79,7 +79,9 @@ namespace Calculator
                     result = Double.Parse(TxtDisplay2.Text);
                     operation = string.Empty;
                 }
-                
+                enterValue = true;
+
+
             }
         }
 
@@ -151,7 +153,8 @@ namespace Calculator
 
         private void BtnNum_Click(object sender, EventArgs e)
         {
-            if (TxtDisplay2.Text == "0"||enterValue) TxtDisplay2.Text = string.Empty;
+
+            if (TxtDisplay2.Text == "0" || enterValue) TxtDisplay2.Text = string.Empty;
 
             enterValue = false;
             Button button = (Button)sender;
